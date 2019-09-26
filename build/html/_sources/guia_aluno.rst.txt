@@ -5,12 +5,12 @@ Ao abrir o software você verá a tela de login, digite seu login e senha padrã
 
 No canto esquerdo da tela estarão os desafios disponíveis, a página de um desafio se parece como essa:
 
-.. image:: ../../image1.jpg
+.. image:: ../static/assets/img/image1.jpg
    :width: 600
 
 Para enviar sua resposta, clique em browse, escolha seu arquivo python que contenha a resolução do exercício e aperte o botão de enviar. O campo de envios indica se a resposta está certa e, se não estiver, mostra uma mensagem de erro.
 
 Para trocar sua senha clique em trocar senha no canto superior e preencher conforme a imagem:
 
-.. image:: ../../image2.jpeg
+.. image:: ../static/assets/img/image2.jpeg
    :width: 600
