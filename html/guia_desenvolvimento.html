@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <title>Guia de Desenvolvimento &#8212; softdes 10/09/2019 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Funções" href="guia_funcoes.html" />
+    <link rel="prev" title="Guia de Professores" href="guia_professores.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="guia-de-desenvolvimento">
+<h1>Guia de Desenvolvimento<a class="headerlink" href="#guia-de-desenvolvimento" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="estrutura-do-codigo">
+<h1>Estrutura do código<a class="headerlink" href="#estrutura-do-codigo" title="Permalink to this headline">¶</a></h1>
+<p>Arquivos relevantes:</p>
+<blockquote>
+<div><p>adduser.py -&gt; adiciona usuários</p>
+<p>softdes.py -&gt; arquivo principal</p>
+<p>quiz.sql -&gt; banco de dados de desafios</p>
+<p>user.sql -&gt; banco de dados de usuários</p>
+<p>templates/index.html -&gt; html do programa</p>
+<p>static/ -&gt; pasta contendo os arquivos js e css</p>
+</div></blockquote>
+<dl class="simple">
+<dt>Bibliotecas usadas:</dt><dd><p>python 3.6,
+datetime,
+sqlite3,
+hashlib,
+flask,
+flask_httpauth</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="rodando-o-programa">
+<h1>Rodando o programa<a class="headerlink" href="#rodando-o-programa" title="Permalink to this headline">¶</a></h1>
+<p>Para rodar o prgrama é necessário, primeiramente, dar pip install nas bibliotecas utilizadas.</p>
+<p>A seguir, é necessário inicializar o banco de dados dos desafio com o sqlite3 com o comando:</p>
+<blockquote>
+<div><p>sqlite3 quiz.db</p>
+</div></blockquote>
+<p>Para gerar as tabelas, rode:</p>
+<blockquote>
+<div><p>sqlite&gt; .read quiz.sql</p>
+<p>sqlite&gt; .quit</p>
+</div></blockquote>
+<p>A seguir, é necessário criar um usuário:</p>
+<p>Faça um arquivo users.csv e adicione um usuário e senha no seguinte formato:</p>
+<blockquote>
+<div><p>usuario, tipo do usuário</p>
+</div></blockquote>
+<p>Os tipos possíveis de usuário são: admin e não admin. Para o segundo, coloque qualquer coisa que não seja admin no campo do tipo.</p>
+<p>Rode o comando que adiciona o usuário no banco de dados:</p>
+<blockquote>
+<div><p>python3 adduser.py</p>
+</div></blockquote>
+<p>Finalmente, para abrir o programa insira os comandos:</p>
+<blockquote>
+<div><p>Export FLASK APP=softdes
+flask run</p>
+</div></blockquote>
+<p>Agora é só acessar o endereço de localhost fornecido e fazer o login (a senha padrão é o nome do usuário).</p>
+<p>Para gerar um desafio, é necessário fazer um insert dentro do arquivo quiz.sql e gerar novamente as tabelas.</p>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">softdes</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="guia_aluno.html">Guia de Aluno</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guia_professores.html">Guia de Professores</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Guia de Desenvolvimento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#estrutura-do-codigo">Estrutura do código</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#rodando-o-programa">Rodando o programa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guia_funcoes.html">Funções</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="guia_professores.html" title="previous chapter">Guia de Professores</a></li>
+      <li>Next: <a href="guia_funcoes.html" title="next chapter">Funções</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, GiuPassarelli.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/guia_desenvolvimento.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

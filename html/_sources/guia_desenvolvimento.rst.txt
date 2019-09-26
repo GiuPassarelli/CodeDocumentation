@@ -1,0 +1,65 @@
+Guia de Desenvolvimento
+===================================
+
+Estrutura do código
+====================
+
+Arquivos relevantes:
+
+	adduser.py -> adiciona usuários
+
+	softdes.py -> arquivo principal
+
+	quiz.sql -> banco de dados de desafios
+
+	user.sql -> banco de dados de usuários
+
+	templates/index.html -> html do programa
+
+	static/ -> pasta contendo os arquivos js e css
+
+
+Bibliotecas usadas:
+	python 3.6,
+	datetime,
+	sqlite3,
+	hashlib,
+	flask,
+	flask_httpauth
+
+Rodando o programa
+====================
+
+Para rodar o prgrama é necessário, primeiramente, dar pip install nas bibliotecas utilizadas.
+
+A seguir, é necessário inicializar o banco de dados dos desafio com o sqlite3 com o comando:
+
+	sqlite3 quiz.db
+
+Para gerar as tabelas, rode:
+
+	sqlite> .read quiz.sql
+
+	sqlite> .quit
+
+A seguir, é necessário criar um usuário:
+
+Faça um arquivo users.csv e adicione um usuário e senha no seguinte formato:
+
+	usuario, tipo do usuário
+
+Os tipos possíveis de usuário são: admin e não admin. Para o segundo, coloque qualquer coisa que não seja admin no campo do tipo.
+
+Rode o comando que adiciona o usuário no banco de dados:
+
+	python3 adduser.py
+
+Finalmente, para abrir o programa insira os comandos:
+
+	Export FLASK APP=softdes
+	flask run
+
+Agora é só acessar o endereço de localhost fornecido e fazer o login (a senha padrão é o nome do usuário).
+
+
+Para gerar um desafio, é necessário fazer um insert dentro do arquivo quiz.sql e gerar novamente as tabelas.

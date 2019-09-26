@@ -1,0 +1,23 @@
+.. softdes documentation master file, created by
+   sphinx-quickstart on Tue Sep 10 09:13:38 2019.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Documentação de softdes!
+===================================
+
+.. toctree::
+   :maxdepth: 3
+
+   guia_aluno
+   guia_professores
+   guia_desenvolvimento
+   guia_funcoes
+
+Esse software tem o intuito de ajudar o ensino de programação em python. Nele, os administradores podem construir diversos desafios de programação e categorizá-los de acordo com seu conteúdo.
+
+Indices e tabelas
+==================
+
+* :ref:`genindex`
+* :ref:`search`

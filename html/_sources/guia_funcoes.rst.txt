@@ -1,0 +1,5 @@
+Funções
+===================================
+
+.. automodule:: softdes
+ :members:
